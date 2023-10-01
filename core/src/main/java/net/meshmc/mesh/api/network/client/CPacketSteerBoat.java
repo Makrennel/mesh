@@ -1,7 +1,7 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 
 /**
  * Provides an interface for boat steering input packets
@@ -9,7 +9,7 @@ import net.meshmc.mesh.statics.StaticPackets;
  */
 public interface CPacketSteerBoat extends Packet.Client {
     static CPacketSteerBoat create(boolean left, boolean right) {
-        return StaticPackets.createCPacketSteerBoat(left, right);
+        return MeshAPI.getStatics().getPackets().createCPacketSteerBoat(left, right);
     }
 
     boolean getLeft();

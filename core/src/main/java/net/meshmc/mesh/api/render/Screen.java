@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.render;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.client.Minecraft;
 
 /**
@@ -87,31 +87,31 @@ public class Screen implements ScreenContext {
     }
 
     public static void openChatScreen(String input) {
-        MeshStatics.openChatScreen(input);
+        MeshAPI.getStatics().openChatScreen(input);
     }
 
     public static void openDemoScreen() {
-        MeshStatics.openDemoScreen();
+        MeshAPI.getStatics().openDemoScreen();
     }
 
     public static void openMultiplayerScreen() {
-        MeshStatics.openMultiplayerScreen();
+        MeshAPI.getStatics().openMultiplayerScreen();
     }
 
     public static void openOptionsScreen() {
-        MeshStatics.openOptionsScreen();
+        MeshAPI.getStatics().openOptionsScreen();
     }
 
     public static void openSelectWorldScreen() {
-        MeshStatics.openSelectWorldScreen();
+        MeshAPI.getStatics().openSelectWorldScreen();
     }
 
     public static void openRealmsMainScreen() {
-        MeshStatics.openRealmsMainScreen();
+        MeshAPI.getStatics().openRealmsMainScreen();
     }
 
     public static void openTitleScreen() {
-        MeshStatics.openTitleScreen();
+        MeshAPI.getStatics().openTitleScreen();
     }
 
     // TODO: ADD MORE HELPER FUNCTIONS

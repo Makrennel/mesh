@@ -1,10 +1,10 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.entity.Entity;
 import net.meshmc.mesh.api.math.Vec2f;
 import net.meshmc.mesh.api.math.Vec3d;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 
 /**
  * Provides an interface for vehicle position packets
@@ -12,11 +12,11 @@ import net.meshmc.mesh.statics.StaticPackets;
  */
 public interface CPacketMoveVehicle extends Packet.Client {
     static CPacketMoveVehicle create(Entity entity) {
-        return StaticPackets.createCPacketMoveVehicle(entity);
+        return MeshAPI.getStatics().getPackets().createCPacketMoveVehicle(entity);
     }
 
     static CPacketMoveVehicle create(double x, double y, double z, float yaw, float pitch) {
-        return StaticPackets.createCPacketMoveVehicle(x, y, z, yaw, pitch);
+        return MeshAPI.getStatics().getPackets().createCPacketMoveVehicle(x, y, z, yaw, pitch);
     }
 
     double getX();

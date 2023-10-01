@@ -1,7 +1,7 @@
 package net.meshmc.mesh.api.network;
 
 import io.netty.buffer.ByteBuf;
-import net.meshmc.mesh.statics.StaticPackets;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.util.GameVersion;
 
 import java.util.EnumMap;
@@ -20,7 +20,7 @@ public interface Packet {
 
     enum C2S {
         ChatMessage(
-                StaticPackets::createCPacketChatMessage,
+                MeshAPI.getStatics().getPackets()::createCPacketChatMessage,
                 GameVersion.v1_19_1, 0x05,
                 GameVersion.v1_19, 0x04,
                 GameVersion.v1_18_2, 0x03,
@@ -28,68 +28,68 @@ public interface Packet {
         ),
 
         ConfirmTeleport(
-                StaticPackets::createCPacketConfirmTeleport,
+                MeshAPI.getStatics().getPackets()::createCPacketConfirmTeleport,
                 GameVersion.v1_18_2, 0x00,
                 GameVersion.v1_12_2, 0x00
         ),
 
         HandSwing(
-                StaticPackets::createCPacketHandSwing,
+                MeshAPI.getStatics().getPackets()::createCPacketHandSwing,
                 GameVersion.v1_18_2, 0x2C,
                 GameVersion.v1_12_2, 0x1D
         ),
 
         Input(
-                StaticPackets::createCPacketInput,
+                MeshAPI.getStatics().getPackets()::createCPacketInput,
                 GameVersion.v1_18_2, 0x1C,
                 GameVersion.v1_12_2, 0x16
         ),
 
         MovePlayerOnGround(
-                StaticPackets::createCPacketMovePlayerOnGround,
+                MeshAPI.getStatics().getPackets()::createCPacketMovePlayerOnGround,
                 GameVersion.v1_18_2, 0x14,
                 GameVersion.v1_12_2, 0x0C
         ),
         MovePlayerPosition(
-                StaticPackets::createCPacketMovePlayerPosition,
+                MeshAPI.getStatics().getPackets()::createCPacketMovePlayerPosition,
                 GameVersion.v1_18_2, 0x11,
                 GameVersion.v1_12_2, 0x0D
         ),
         MovePlayerPositionRotation(
-                StaticPackets::createCPacketMovePlayerPositionRotation,
+                MeshAPI.getStatics().getPackets()::createCPacketMovePlayerPositionRotation,
                 GameVersion.v1_18_2, 0x12,
                 GameVersion.v1_12_2, 0x0E
         ),
         MovePlayerRotation(
-                StaticPackets::createCPacketMovePlayerRotation,
+                MeshAPI.getStatics().getPackets()::createCPacketMovePlayerRotation,
                 GameVersion.v1_18_2, 0x13,
                 GameVersion.v1_12_2, 0x0F
         ),
 
         MoveVehicle(
-                StaticPackets::createCPacketMoveVehicle,
+                MeshAPI.getStatics().getPackets()::createCPacketMoveVehicle,
                 GameVersion.v1_18_2, 0x15,
                 GameVersion.v1_12_2, 0x10
         ),
 
         SteerBoat(
-                StaticPackets::createCPacketSteerBoat,
+                MeshAPI.getStatics().getPackets()::createCPacketSteerBoat,
                 GameVersion.v1_18_2, 0x16,
                 GameVersion.v1_12_2, 0x11
         ),
 
         UseBlock(
-                StaticPackets::createCPacketUseBlock,
+                MeshAPI.getStatics().getPackets()::createCPacketUseBlock,
                 GameVersion.v1_18_2, 0x2E,
                 GameVersion.v1_12_2, 0x1F
         ),
         UseEntity(
-                StaticPackets::createCPacketUseEntity,
+                MeshAPI.getStatics().getPackets()::createCPacketUseEntity,
                 GameVersion.v1_18_2, 0x0D,
                 GameVersion.v1_12_2, 0x0A
         ),
         UseItem(
-                StaticPackets::createCPacketUseItem,
+                MeshAPI.getStatics().getPackets()::createCPacketUseItem,
                 GameVersion.v1_18_2, 0x2F,
                 GameVersion.v1_12_2, 0x20
         ),
@@ -133,32 +133,32 @@ public interface Packet {
 
     enum S2C {
         AdvancementUpdate(
-                StaticPackets::createSPacketAdvancementUpdate,
+                MeshAPI.getStatics().getPackets()::createSPacketAdvancementUpdate,
                 GameVersion.v1_18_2, 0x63,
                 GameVersion.v1_12_2, 0x4D
         ),
         BlockAction(
-                StaticPackets::createSPacketBlockAction,
+                MeshAPI.getStatics().getPackets()::createSPacketBlockAction,
                 GameVersion.v1_18_2, 0x0B,
                 GameVersion.v1_12_2, 0x0A
         ),
         BlockUpdate(
-                StaticPackets::createSPacketBlockUpdate,
+                MeshAPI.getStatics().getPackets()::createSPacketBlockUpdate,
                 GameVersion.v1_18_2, 0x0C,
                 GameVersion.v1_12_2, 0x0B
         ),
         BreakProgress(
-                StaticPackets::createSPacketBreakProgress,
+                MeshAPI.getStatics().getPackets()::createSPacketBreakProgress,
                 GameVersion.v1_18_2, 0x09,
                 GameVersion.v1_12_2, 0x08
         ),
         PlayerPositionRotation(
-                StaticPackets::createSPacketPlayerPositionRotation,
+                MeshAPI.getStatics().getPackets()::createSPacketPlayerPositionRotation,
                 GameVersion.v1_18_2, 0x38,
                 GameVersion.v1_12_2, 0x2F
         ),
         TileEntityUpdate(
-                StaticPackets::createSPacketTileEntityUpdate,
+                MeshAPI.getStatics().getPackets()::createSPacketTileEntityUpdate,
                 GameVersion.v1_18_2, 0x0A,
                 GameVersion.v1_12_2, 0x09
         ),

@@ -1,9 +1,9 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.math.Vec2f;
 import net.meshmc.mesh.api.math.Vec3d;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 
 /**
  * Provides an interface for player position and rotation packets
@@ -12,7 +12,7 @@ import net.meshmc.mesh.statics.StaticPackets;
 public interface CPacketMovePlayer extends Packet.Client {
     interface OnGround extends CPacketMovePlayer {
         static OnGround create(boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerOnGround(onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerOnGround(onGround);
         }
 
         boolean isOnGround();
@@ -21,11 +21,11 @@ public interface CPacketMovePlayer extends Packet.Client {
 
     interface Position extends CPacketMovePlayer.OnGround {
         static Position create(double x, double y, double z, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerPosition(x, y, z, onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerPosition(x, y, z, onGround);
         }
 
         static Position create(Vec3d position, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerPosition(position.getX(), position.getY(), position.getZ(), onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerPosition(position.getX(), position.getY(), position.getZ(), onGround);
         }
 
         double getX();
@@ -54,11 +54,11 @@ public interface CPacketMovePlayer extends Packet.Client {
 
     interface Rotation extends CPacketMovePlayer.OnGround {
         static Rotation create(float yaw, float pitch, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerRotation(yaw, pitch, onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerRotation(yaw, pitch, onGround);
         }
 
         static Rotation create(Vec2f rotation, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerRotation(rotation.getX(), rotation.getY(), onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerRotation(rotation.getX(), rotation.getY(), onGround);
         }
 
         float getYaw();
@@ -83,11 +83,11 @@ public interface CPacketMovePlayer extends Packet.Client {
 
     interface PositionRotation extends CPacketMovePlayer.Rotation, CPacketMovePlayer.Position {
         static PositionRotation create(double x, double y, double z, float yaw, float pitch, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerPositionRotation(x, y, z, yaw, pitch, onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerPositionRotation(x, y, z, yaw, pitch, onGround);
         }
 
         static PositionRotation create(Vec3d position, Vec2f rotation, boolean onGround) {
-            return StaticPackets.createCPacketMovePlayerPositionRotation(position.getX(), position.getY(), position.getZ(), rotation.getX(), rotation.getY(), onGround);
+            return MeshAPI.getStatics().getPackets().createCPacketMovePlayerPositionRotation(position.getX(), position.getY(), position.getZ(), rotation.getX(), rotation.getY(), onGround);
         }
     }
 }

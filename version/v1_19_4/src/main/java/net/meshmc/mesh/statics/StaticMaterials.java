@@ -2,184 +2,229 @@ package net.meshmc.mesh.statics;
 
 import net.meshmc.mesh.api.block.Material;
 
-public class StaticMaterials {
-    public static Material AIR() {
+public class StaticMaterials implements IStaticMaterials {
+    @Override
+    public Material AIR() {
         return (Material) net.minecraft.block.Material.AIR;
     }
 
-    public static Material AMETHYST() {
+    @Override
+    public Material AMETHYST() {
         return (Material) net.minecraft.block.Material.AMETHYST;
     }
 
-    public static Material ANVIL() {
+    @Override
+    public Material ANVIL() {
         return (Material) net.minecraft.block.Material.REPAIR_STATION;
     }
 
-    public static Material BAMBOO() {
+    @Override
+    public Material BAMBOO() {
         return (Material) net.minecraft.block.Material.BAMBOO;
     }
 
-    public static Material BAMBOO_SAPLING() {
+    @Override
+    public Material BAMBOO_SAPLING() {
         return (Material) net.minecraft.block.Material.BAMBOO_SAPLING;
     }
 
-    public static Material BARRIER() {
+    @Override
+    public Material BARRIER() {
         return (Material) net.minecraft.block.Material.BARRIER;
     }
 
-    public static Material BUBBLE_COLUMN() {
+    @Override
+    public Material BUBBLE_COLUMN() {
         return (Material) net.minecraft.block.Material.BUBBLE_COLUMN;
     }
 
-    public static Material CACTUS() {
+    @Override
+    public Material CACTUS() {
         return (Material) net.minecraft.block.Material.CACTUS;
     }
 
-    public static Material CAKE() {
+    @Override
+    public Material CAKE() {
         return (Material) net.minecraft.block.Material.CAKE;
     }
 
-    public static Material CARPET() {
+    @Override
+    public Material CARPET() {
         return (Material) net.minecraft.block.Material.CARPET;
     }
 
-    public static Material CLAY() {
+    @Override
+    public Material CLAY() {
         return (Material) net.minecraft.block.Material.ORGANIC_PRODUCT;
     }
 
-    public static Material DECORATION() {
+    @Override
+    public Material DECORATION() {
         return (Material) net.minecraft.block.Material.DECORATION;
     }
 
-    public static Material DRAGON_EGG() {
+    @Override
+    public Material DRAGON_EGG() {
         return (Material) net.minecraft.block.Material.EGG;
     }
 
-    public static Material FIRE() {
+    @Override
+    public Material FIRE() {
         return (Material) net.minecraft.block.Material.FIRE;
     }
 
-    public static Material GLASS() {
+    @Override
+    public Material GLASS() {
         return (Material) net.minecraft.block.Material.GLASS;
     }
 
-    public static Material GOURD() {
+    @Override
+    public Material GOURD() {
         return (Material) net.minecraft.block.Material.GOURD;
     }
 
-    public static Material GRASS() {
+    @Override
+    public Material GRASS() {
         return (Material) net.minecraft.block.Material.SOLID_ORGANIC;
     }
 
-    public static Material IRON() {
+    @Override
+    public Material IRON() {
         return (Material) net.minecraft.block.Material.METAL;
     }
 
-    public static Material ICE() {
+    @Override
+    public Material ICE() {
         return (Material) net.minecraft.block.Material.ICE;
     }
 
-    public static Material ICE_DENSE() {
+    @Override
+    public Material ICE_DENSE() {
         return (Material) net.minecraft.block.Material.DENSE_ICE;
     }
 
-    public static Material LAVA() {
+    @Override
+    public Material LAVA() {
         return (Material) net.minecraft.block.Material.LAVA;
     }
 
-    public static Material LEAVES() {
+    @Override
+    public Material LEAVES() {
         return (Material) net.minecraft.block.Material.LEAVES;
     }
 
-    public static Material MOSS_BLOCK() {
+    @Override
+    public Material MOSS_BLOCK() {
         return (Material) net.minecraft.block.Material.MOSS_BLOCK;
     }
 
-    public static Material NETHER_SHOOTS() {
+    @Override
+    public Material NETHER_SHOOTS() {
         return (Material) net.minecraft.block.Material.NETHER_SHOOTS;
     }
 
-    public static Material NETHER_WOOD() {
+    @Override
+    public Material NETHER_WOOD() {
         return (Material) net.minecraft.block.Material.NETHER_WOOD;
     }
 
-    public static Material PISTON() {
+    @Override
+    public Material PISTON() {
         return (Material) net.minecraft.block.Material.PISTON;
     }
 
-    public static Material PLANT() {
+    @Override
+    public Material PLANT() {
         return (Material) net.minecraft.block.Material.PLANT;
     }
 
-    public static Material PLANT_REPLACEABLE() {
+    @Override
+    public Material PLANT_REPLACEABLE() {
         return (Material) net.minecraft.block.Material.REPLACEABLE_PLANT;
     }
 
-    public static Material PLANT_UNDERWATER() {
+    @Override
+    public Material PLANT_UNDERWATER() {
         return (Material) net.minecraft.block.Material.UNDERWATER_PLANT;
     }
 
-    public static Material PORTAL() {
+    @Override
+    public Material PORTAL() {
         return (Material) net.minecraft.block.Material.PORTAL;
     }
 
-    public static Material REDSTONE_LIGHT() {
+    @Override
+    public Material REDSTONE_LIGHT() {
         return (Material) net.minecraft.block.Material.REDSTONE_LAMP;
     }
 
-    public static Material ROCK() {
+    @Override
+    public Material ROCK() {
         return (Material) net.minecraft.block.Material.STONE;
     }
 
-    public static Material SAND() {
+    @Override
+    public Material SAND() {
         return (Material) net.minecraft.block.Material.AGGREGATE;
     }
 
-    public static Material SCULK() {
+    @Override
+    public Material SCULK() {
         return (Material) net.minecraft.block.Material.SCULK;
     }
 
-    public static Material SNOW_BLOCK() {
+    @Override
+    public Material SNOW_BLOCK() {
         return (Material) net.minecraft.block.Material.SNOW_BLOCK;
     }
 
-    public static Material SNOW_LAYER() {
+    @Override
+    public Material SNOW_LAYER() {
         return (Material) net.minecraft.block.Material.SNOW_LAYER;
     }
 
-    public static Material SNOW_POWDER() {
+    @Override
+    public Material SNOW_POWDER() {
         return (Material) net.minecraft.block.Material.POWDER_SNOW;
     }
 
-    public static Material SOIL() {
+    @Override
+    public Material SOIL() {
         return (Material) net.minecraft.block.Material.SOIL;
     }
 
-    public static Material SPONGE() {
+    @Override
+    public Material SPONGE() {
         return (Material) net.minecraft.block.Material.SPONGE;
     }
 
-    public static Material STRUCTURE_VOID() {
+    @Override
+    public Material STRUCTURE_VOID() {
         return (Material) net.minecraft.block.Material.STRUCTURE_VOID;
     }
 
-    public static Material TNT() {
+    @Override
+    public Material TNT() {
         return (Material) net.minecraft.block.Material.TNT;
     }
 
-    public static Material WATER() {
+    @Override
+    public Material WATER() {
         return (Material) net.minecraft.block.Material.WATER;
     }
 
-    public static Material WEB() {
+    @Override
+    public Material WEB() {
         return (Material) net.minecraft.block.Material.COBWEB;
     }
 
-    public static Material WOOD() {
+    @Override
+    public Material WOOD() {
         return (Material) net.minecraft.block.Material.WOOD;
     }
 
-    public static Material WOOL() {
+    @Override
+    public Material WOOL() {
         return (Material) net.minecraft.block.Material.WOOL;
     }
 }

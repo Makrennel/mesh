@@ -1,12 +1,12 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 public interface Vec3d {
     Vec3d ZERO = create(0,0,0);
 
     static Vec3d create(double x, double y, double z) {
-        return MeshStatics.createVec3d(x, y, z);
+        return MeshAPI.getStatics().createVec3d(x, y, z);
     }
 
     double getX();

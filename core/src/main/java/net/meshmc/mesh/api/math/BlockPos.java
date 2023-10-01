@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.util.math.Facing;
 
 /**
@@ -9,7 +9,7 @@ import net.meshmc.mesh.util.math.Facing;
  */
 public interface BlockPos extends Vec3i {
     static BlockPos create(int x, int y, int z) {
-        return MeshStatics.createBlockPos(x, y, z);
+        return MeshAPI.getStatics().createBlockPos(x, y, z);
     }
 
     static BlockPos create(double x, double y, double z) {

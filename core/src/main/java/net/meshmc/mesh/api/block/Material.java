@@ -1,7 +1,6 @@
 package net.meshmc.mesh.api.block;
 
-import net.meshmc.mesh.MeshStatics;
-import net.meshmc.mesh.statics.StaticMaterials;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.util.block.PistonPushReaction;
 
 /**
@@ -11,54 +10,54 @@ import net.meshmc.mesh.util.block.PistonPushReaction;
  */
 public interface Material {
     Material
-            AIR = StaticMaterials.AIR(),
-            AMETHYST = StaticMaterials.AMETHYST(),
-            ANVIL = StaticMaterials.ANVIL(),
-            BAMBOO = StaticMaterials.BAMBOO(),
-            BAMBOO_SAPLING = StaticMaterials.BAMBOO_SAPLING(),
-            BARRIER = StaticMaterials.BARRIER(),
-            BUBBLE_COLUMN = StaticMaterials.BUBBLE_COLUMN(),
-            CACTUS = StaticMaterials.CACTUS(),
-            CAKE = StaticMaterials.CAKE(),
-            CARPET = StaticMaterials.CARPET(),
-            CLAY = StaticMaterials.CLAY(),
-            DECORATION = StaticMaterials.DECORATION(),
-            DRAGON_EGG = StaticMaterials.DRAGON_EGG(),
-            FIRE = StaticMaterials.FIRE(),
-            GLASS = StaticMaterials.GLASS(),
-            GOURD = StaticMaterials.GOURD(),
-            GRASS = StaticMaterials.GRASS(),
-            IRON = StaticMaterials.IRON(),
-            ICE = StaticMaterials.ICE(),
-            ICE_DENSE = StaticMaterials.ICE_DENSE(),
-            LAVA = StaticMaterials.LAVA(),
-            LEAVES = StaticMaterials.LEAVES(),
-            MOSS_BLOCK = StaticMaterials.MOSS_BLOCK(),
-            NETHER_SHOOTS = StaticMaterials.NETHER_SHOOTS(),
-            NETHER_WOOD = StaticMaterials.NETHER_WOOD(),
-            PISTON = StaticMaterials.PISTON(),
-            PLANT = StaticMaterials.PLANT(),
-            PLANT_REPLACEABLE = StaticMaterials.PLANT_REPLACEABLE(),
-            PLANT_UNDERWATER = StaticMaterials.PLANT_UNDERWATER(),
-            PORTAL = StaticMaterials.PORTAL(),
-            REDSTONE_LIGHT = StaticMaterials.REDSTONE_LIGHT(),
-            ROCK = StaticMaterials.ROCK(),
-            SAND = StaticMaterials.SAND(),
-            SCULK = StaticMaterials.SCULK(),
-            SNOW_BLOCK = StaticMaterials.SNOW_BLOCK(),
-            SNOW_LAYER = StaticMaterials.SNOW_LAYER(),
-            SNOW_POWDER = StaticMaterials.SNOW_POWDER(),
-            SOIL = StaticMaterials.SOIL(),
-            SPONGE = StaticMaterials.SPONGE(),
-            STRUCTURE_VOID = StaticMaterials.STRUCTURE_VOID(),
-            TNT = StaticMaterials.TNT(),
-            WATER = StaticMaterials.WATER(),
-            WEB = StaticMaterials.WEB(),
-            WOOD = StaticMaterials.WOOD(),
-            WOOL = StaticMaterials.WOOL();
+            AIR = MeshAPI.getStatics().getMaterials().AIR(),
+            AMETHYST = MeshAPI.getStatics().getMaterials().AMETHYST(),
+            ANVIL = MeshAPI.getStatics().getMaterials().ANVIL(),
+            BAMBOO = MeshAPI.getStatics().getMaterials().BAMBOO(),
+            BAMBOO_SAPLING = MeshAPI.getStatics().getMaterials().BAMBOO_SAPLING(),
+            BARRIER = MeshAPI.getStatics().getMaterials().BARRIER(),
+            BUBBLE_COLUMN = MeshAPI.getStatics().getMaterials().BUBBLE_COLUMN(),
+            CACTUS = MeshAPI.getStatics().getMaterials().CACTUS(),
+            CAKE = MeshAPI.getStatics().getMaterials().CAKE(),
+            CARPET = MeshAPI.getStatics().getMaterials().CARPET(),
+            CLAY = MeshAPI.getStatics().getMaterials().CLAY(),
+            DECORATION = MeshAPI.getStatics().getMaterials().DECORATION(),
+            DRAGON_EGG = MeshAPI.getStatics().getMaterials().DRAGON_EGG(),
+            FIRE = MeshAPI.getStatics().getMaterials().FIRE(),
+            GLASS = MeshAPI.getStatics().getMaterials().GLASS(),
+            GOURD = MeshAPI.getStatics().getMaterials().GOURD(),
+            GRASS = MeshAPI.getStatics().getMaterials().GRASS(),
+            IRON = MeshAPI.getStatics().getMaterials().IRON(),
+            ICE = MeshAPI.getStatics().getMaterials().ICE(),
+            ICE_DENSE = MeshAPI.getStatics().getMaterials().ICE_DENSE(),
+            LAVA = MeshAPI.getStatics().getMaterials().LAVA(),
+            LEAVES = MeshAPI.getStatics().getMaterials().LEAVES(),
+            MOSS_BLOCK = MeshAPI.getStatics().getMaterials().MOSS_BLOCK(),
+            NETHER_SHOOTS = MeshAPI.getStatics().getMaterials().NETHER_SHOOTS(),
+            NETHER_WOOD = MeshAPI.getStatics().getMaterials().NETHER_WOOD(),
+            PISTON = MeshAPI.getStatics().getMaterials().PISTON(),
+            PLANT = MeshAPI.getStatics().getMaterials().PLANT(),
+            PLANT_REPLACEABLE = MeshAPI.getStatics().getMaterials().PLANT_REPLACEABLE(),
+            PLANT_UNDERWATER = MeshAPI.getStatics().getMaterials().PLANT_UNDERWATER(),
+            PORTAL = MeshAPI.getStatics().getMaterials().PORTAL(),
+            REDSTONE_LIGHT = MeshAPI.getStatics().getMaterials().REDSTONE_LIGHT(),
+            ROCK = MeshAPI.getStatics().getMaterials().ROCK(),
+            SAND = MeshAPI.getStatics().getMaterials().SAND(),
+            SCULK = MeshAPI.getStatics().getMaterials().SCULK(),
+            SNOW_BLOCK = MeshAPI.getStatics().getMaterials().SNOW_BLOCK(),
+            SNOW_LAYER = MeshAPI.getStatics().getMaterials().SNOW_LAYER(),
+            SNOW_POWDER = MeshAPI.getStatics().getMaterials().SNOW_POWDER(),
+            SOIL = MeshAPI.getStatics().getMaterials().SOIL(),
+            SPONGE = MeshAPI.getStatics().getMaterials().SPONGE(),
+            STRUCTURE_VOID = MeshAPI.getStatics().getMaterials().STRUCTURE_VOID(),
+            TNT = MeshAPI.getStatics().getMaterials().TNT(),
+            WATER = MeshAPI.getStatics().getMaterials().WATER(),
+            WEB = MeshAPI.getStatics().getMaterials().WEB(),
+            WOOD = MeshAPI.getStatics().getMaterials().WOOD(),
+            WOOL = MeshAPI.getStatics().getMaterials().WOOL();
 
     static Material create(MapColor mapColor) {
-        return MeshStatics.createMaterial(mapColor);
+        return MeshAPI.getStatics().createMaterial(mapColor);
     }
 
     boolean isLiquid_();

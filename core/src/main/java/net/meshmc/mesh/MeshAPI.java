@@ -17,6 +17,9 @@ public class MeshAPI implements Mod.Initializer {
     @Mod.Interface
     private static IMesh MESH;
 
+    @Mod.Interface
+    private static IStatics STATICS;
+
     @Override
     public void init(Mod mod) {
         LOGGER.info("Mesh API loaded in {} {}!",
@@ -39,5 +42,9 @@ public class MeshAPI implements Mod.Initializer {
 
     public static Utilities getUtilities() {
         return MESH.getUtilities();
+    }
+
+    public static IStatics getStatics() {
+        return STATICS;
     }
 }

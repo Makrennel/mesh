@@ -1,9 +1,9 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.math.BlockPos;
 import net.meshmc.mesh.api.math.Vec3d;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 import net.meshmc.mesh.util.GameVersion;
 import net.meshmc.mesh.util.math.Facing;
 import net.meshmc.mesh.util.math.Hand;
@@ -15,8 +15,8 @@ import javax.annotation.Nullable;
  * @author Makrennel 2022/02/09
  */
 public interface CPacketUseBlock extends Packet.Client {
-    static CPacketUseBlock createCPacketUseBlock(Hand hand, BlockPos blockPos, Facing facing, Vec3d vector, boolean insideBlock) {
-        return StaticPackets.createCPacketUseBlock(hand, blockPos, facing, vector, insideBlock);
+    static CPacketUseBlock createCPacketUseBlock(Hand hand, BlockPos blockPos, Facing facing, Vec3d vector, boolean insideBlock, int sequence) {
+        return MeshAPI.getStatics().getPackets().createCPacketUseBlock(hand, blockPos, facing, vector, insideBlock, sequence);
     }
 
     BlockPos getBlockPos();

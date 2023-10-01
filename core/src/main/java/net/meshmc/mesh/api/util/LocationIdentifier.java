@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.util;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 /**
  * represents an asset/resource in the jar/archive
@@ -9,11 +9,11 @@ import net.meshmc.mesh.MeshStatics;
  */
 public interface LocationIdentifier {
     static LocationIdentifier create(String namespace, String path) {
-        return MeshStatics.createLocationIdentifier(namespace, path);
+        return MeshAPI.getStatics().createLocationIdentifier(namespace, path);
     }
 
     static LocationIdentifier create(String path) {
-        return MeshStatics.createLocationIdentifier(path);
+        return MeshAPI.getStatics().createLocationIdentifier(path);
     }
 
     String getNamespace();

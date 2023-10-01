@@ -1,9 +1,9 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.entity.Entity;
 import net.meshmc.mesh.api.math.Vec3d;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 import net.meshmc.mesh.util.GameVersion;
 import net.meshmc.mesh.util.math.Hand;
 import org.jetbrains.annotations.Nullable;
@@ -19,15 +19,15 @@ public interface CPacketUseEntity extends Packet.Client {
     }
 
     static CPacketUseEntity createAttack(Entity entity, @GameVersion.OnlyOn(value = GameVersion.v1_16_3, minimumVersion = true) boolean sneaking) {
-        return StaticPackets.createCPacketUseEntityAttack(entity, sneaking);
+        return MeshAPI.getStatics().getPackets().createCPacketUseEntityAttack(entity, sneaking);
     }
 
     static CPacketUseEntity createInteract(Entity entity, Hand hand, @GameVersion.OnlyOn(value = GameVersion.v1_16_3, minimumVersion = true) boolean sneaking) {
-        return StaticPackets.createCPacketUseEntityInteract(entity, hand, sneaking);
+        return MeshAPI.getStatics().getPackets().createCPacketUseEntityInteract(entity, hand, sneaking);
     }
 
     static CPacketUseEntity createInteractAt(Entity entity, Hand hand, Vec3d pos, @GameVersion.OnlyOn(value = GameVersion.v1_16_3, minimumVersion = true) boolean sneaking) {
-        return StaticPackets.createCPacketUseEntityInteractAt(entity, hand, pos, sneaking);
+        return MeshAPI.getStatics().getPackets().createCPacketUseEntityInteractAt(entity, hand, pos, sneaking);
     }
 
     int getEntityID();

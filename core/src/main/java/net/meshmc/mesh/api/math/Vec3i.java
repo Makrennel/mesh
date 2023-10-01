@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 /**
  * Provides a mesh interface for interfacing with a 3d integer vector
@@ -8,11 +8,11 @@ import net.meshmc.mesh.MeshStatics;
  */
 public interface Vec3i {
     static Vec3i create(int x, int y, int z) {
-        return MeshStatics.createVec3i(x, y, z);
+        return MeshAPI.getStatics().createVec3i(x, y, z);
     }
 
     static Vec3i create(double x, double y, double z) {
-        return MeshStatics.createVec3i((int) Math.floor(x), (int) Math.floor(y), (int) Math.floor(z));
+        return MeshAPI.getStatics().createVec3i((int) Math.floor(x), (int) Math.floor(y), (int) Math.floor(z));
     }
 
     static Vec3i create(Vec3d vec3d) {

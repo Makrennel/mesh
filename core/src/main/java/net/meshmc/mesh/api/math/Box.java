@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 /**
  * Provides a mesh interface for interfacing with a 3d box
@@ -8,7 +8,7 @@ import net.meshmc.mesh.MeshStatics;
  */
 public interface Box {
     static Box create(double x1, double y1, double z1, double x2, double y2, double z2) {
-        return MeshStatics.createBox(x1, y1, z1, x2, y2, z2);
+        return MeshAPI.getStatics().createBox(x1, y1, z1, x2, y2, z2);
     }
 
     static Box create(BlockPos pos) {

@@ -1,7 +1,7 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 
 /**
  * Provides an interface for input packets
@@ -9,7 +9,7 @@ import net.meshmc.mesh.statics.StaticPackets;
  */
 public interface CPacketInput extends Packet.Client {
     static CPacketInput create(float sideways, float forward, boolean jumping, boolean sneaking) {
-        return StaticPackets.createCPacketInput(sideways, forward, jumping, sneaking);
+        return MeshAPI.getStatics().getPackets().createCPacketInput(sideways, forward, jumping, sneaking);
     }
 
     float getSideways();

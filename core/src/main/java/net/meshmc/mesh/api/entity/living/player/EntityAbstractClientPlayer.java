@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.entity.living.player;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.util.LocationIdentifier;
 
 public interface EntityAbstractClientPlayer extends EntityPlayer {
@@ -32,7 +32,7 @@ public interface EntityAbstractClientPlayer extends EntityPlayer {
     // TODO: getDownloadImageSkin 1.12 & loadSkin 1.18 - they do the same thing but one returns?
 
     static LocationIdentifier getSkinId(String playerName) {
-        return MeshStatics.EntityAbstractClientPlayer_getSkinId(playerName);
+        return MeshAPI.getStatics().EntityAbstractClientPlayer_getSkinId(playerName);
     }
 
     String getModel();

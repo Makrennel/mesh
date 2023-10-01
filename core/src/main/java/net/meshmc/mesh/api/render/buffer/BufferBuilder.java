@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.render.buffer;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.AbstractMesh;
 import net.meshmc.mesh.api.render.Renderer;
 import net.meshmc.mesh.util.render.Vertex;
@@ -15,7 +15,7 @@ public abstract class BufferBuilder<T> extends AbstractMesh<T> {
     }
 
     public static BufferBuilder<?> create(int initialCapacity) {
-        return MeshStatics.createBufferBuilder(initialCapacity);
+        return MeshAPI.getStatics().createBufferBuilder(initialCapacity);
     }
 
     public abstract void begin(Renderer.DrawMode drawMode, Renderer.VertexFormat vertexFormat);

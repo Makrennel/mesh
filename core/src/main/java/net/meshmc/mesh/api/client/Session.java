@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.client;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 /**
  * Provides a mesh interface for minecraft's session
@@ -8,7 +8,7 @@ import net.meshmc.mesh.MeshStatics;
  */
 public interface Session {
     static Session create(String username, String uuid, String accessToken, String type) {
-        return MeshStatics.createSession(username, uuid, accessToken, type);
+        return MeshAPI.getStatics().createSession(username, uuid, accessToken, type);
     }
 
     String getSessionId();

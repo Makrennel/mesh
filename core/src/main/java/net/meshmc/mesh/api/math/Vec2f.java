@@ -1,10 +1,10 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 public interface Vec2f {
     static Vec2f create(float x, float y) {
-        return MeshStatics.createVec2f(x, y);
+        return MeshAPI.getStatics().createVec2f(x, y);
     }
 
     float getX();

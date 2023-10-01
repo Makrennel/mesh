@@ -1,7 +1,7 @@
 package net.meshmc.mesh.api.network.client;
 
+import net.meshmc.mesh.MeshAPI;
 import net.meshmc.mesh.api.network.Packet;
-import net.meshmc.mesh.statics.StaticPackets;
 import net.meshmc.mesh.util.GameVersion;
 import org.jetbrains.annotations.Nullable;
 
@@ -9,7 +9,9 @@ import java.time.Instant;
 
 public interface CPacketChatMessage extends Packet.Client {
     static CPacketChatMessage create(String message) {
-        return StaticPackets.createCPacketChatMessage(message);
+        // TODO: 1.19 stuff
+        throw new RuntimeException("Not yet implemented");
+//        return MeshAPI.getStatics().getPackets().createCPacketChatMessage(message);
     }
 
     String getMessage();

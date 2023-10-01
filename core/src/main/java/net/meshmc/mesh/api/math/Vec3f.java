@@ -1,6 +1,6 @@
 package net.meshmc.mesh.api.math;
 
-import net.meshmc.mesh.MeshStatics;
+import net.meshmc.mesh.MeshAPI;
 
 /**
  * Provides a mesh interface for interfacing with a 3d floating point vector
@@ -10,7 +10,7 @@ public interface Vec3f {
     Vec3f ZERO = create(0, 0, 0);
 
     static Vec3f create(float x, float y, float z) {
-        return MeshStatics.createVec3f(x, y, z);
+        return MeshAPI.getStatics().createVec3f(x, y, z);
     }
 
     static Vec3f create(Vec3i vec3i) {
